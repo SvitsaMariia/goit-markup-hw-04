@@ -16,6 +16,10 @@ sans-serif;
     --primary-brand-color:  #4D5AE5;
     --accent-color: #404BBF;
     --secondary-accent-color:#E7E9FC; 
+    --svg-bg-color: #AFB1B8;
+    --light-slate-color: #8E8F99;
+    --bg-link-footer-color: #31D0AA;
+    --footer-link-color: rgba(255, 255, 255, 0.1);
     --body-font-size: 16px;
     --title-font-size: 36px; 
 }
@@ -34,6 +38,12 @@ p {
     margin: 0;
 }
 
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 /* HEADER max-width 1440x */
 .container {
     max-width: 1158px; 
@@ -141,11 +151,15 @@ img {
 }
 /* Section hero 1 */
 .section.hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     margin: 0 auto;
     width: 1440px;
     background-color: var(--title-text-color);
     padding-top: 188px; 
     padding-bottom: 188px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .hero-title {
     margin: 0 auto;
@@ -179,7 +193,19 @@ img {
     display: flex;
     gap: 24px;
 }
-
+.features-list .item {
+    width: 264px;
+    list-style-type: none;
+}
+.features-img-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    height: 112px;
+    background-color: var(--secondary-bg-color);
+}
 .work-features {
     font-weight: 500;
     font-size: 20px;
@@ -210,6 +236,7 @@ img {
     display: flex;
     gap:  24px;
 }
+
 /* Section 4 */
 .team {
     background: #F4F4FD;
@@ -249,7 +276,59 @@ img {
 .job-title {
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 24px;
+}
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-brand-color);
+    border-radius: 50%;
+}
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--accent-color);
+}
+.svg-team {
+    color: var(--secondary-bg-color);
+}
+/* Section Customers */
+.customers-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 24px;
+}
+.customers-title {
+    margin-bottom: 72px;
+    text-align: center;
+    font-size: var(--title-font-size);
+    line-height: calc(40/36);
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+}
+.company-logo {
+    width: 168px;
+    height: 88px;
+}
+.logo-link-company {
+    display: flex;
+    border: 1px solid var(--light-slate-color);
+    border-radius: 4px;
+    padding: 16px 32px;
+}
+.logo-link-company:hover,
+.logo-link-company:focus {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
 
 /* PORTFOLIO */
 .filters-button {
@@ -311,6 +390,9 @@ button:focus {
   margin: 8px;
 }
 
+
+
+
 /* FOOTER */
 .footer {
     background-color: var(--title-text-color); 
@@ -329,7 +411,40 @@ button:focus {
     padding-top: 0px;
     padding-bottom: 0px;
 }
+.footer-contain {
+    margin-right: 120px;
+}
 .logo-footer {
     color: var(--secondary-bg-color);
     letter-spacing: 0.03em;
 } 
+.social-description {
+    font-weight: 500;
+    line-height: calc(24/16);
+    letter-spacing: 0.02em;
+    color: var(--primary-bg-color);
+    text-align: center;
+    margin-top: -120px;
+    margin-right: 120px;
+}
+.social-footer {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+.social-link-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--main-text-color);
+}
+.social-link-footer:hover,
+.social-link-footer:focus {
+    background-color: var(--bg-link-footer-color);
+}
+.social-footer {
+    margin-top: 16px;
+}
