@@ -52,10 +52,13 @@ ol {
     padding-left: 15px;
     padding-right: 15px;
 }
+.header {
+    border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 .header-container {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #E7E9FC;
 }
 .logo {
     font-family: 'Raleway';
@@ -322,14 +325,13 @@ img {
     border: 1px solid var(--light-slate-color);
     border-radius: 4px;
     padding: 16px 32px;
+    outline: transparent;
 }
-.logo-link-company:hover,
-.logo-link-company:focus {
+.logo-link-company:hover, .svg-logo-company,
+.logo-link-company:focus, .svg-logo-company {
     border-color: var(--accent-color);
-    color: var(--accent-color);
+    fill: var(--accent-color);
 }
-
-
 /* PORTFOLIO */
 .filters-button {
     font-family: inherit;
@@ -372,8 +374,12 @@ button:focus {
     flex-wrap: wrap;
     gap: 48px 24px;
 }
-.works-item:hover,
-.works-item:focus {
+.works-link {
+    display: block;
+    text-decoration: none;
+}
+.works-link:hover,
+.works-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
  }
 .services-content {
@@ -391,6 +397,7 @@ button:focus {
 .industry {
     line-height: 1.5;
     letter-spacing: 0.02em;
+    color: var(--main-text-color);
 }
 .services,
 .industry {
