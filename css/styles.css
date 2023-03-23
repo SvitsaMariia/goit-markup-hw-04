@@ -326,12 +326,20 @@ img {
     border-radius: 4px;
     padding: 16px 32px;
     outline: transparent;
+} 
+.svg-logo-company {
+    fill: var(--light-slate-color);
 }
-.logo-link-company:hover, .svg-logo-company,
-.logo-link-company:focus, .svg-logo-company {
+.logo-link-company:hover  .svg-logo-company,
+.logo-link-company:focus  .svg-logo-company {
     border-color: var(--accent-color);
     fill: var(--accent-color);
 }
+.logo-link-company:hover,
+.logo-link-company:focus {
+    border-color: var(--accent-color);
+}
+
 /* PORTFOLIO */
 .filters-button {
     font-family: inherit;
